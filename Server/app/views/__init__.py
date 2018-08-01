@@ -4,7 +4,6 @@ import json
 
 
 class BaseResource(Resource):
-
     @classmethod
     def unicode_safe_json_dumps(cls, data, status_code=200):
         return Response(
@@ -12,3 +11,9 @@ class BaseResource(Resource):
             status_code,
             content_type='application/json; charset=utf8'
         )
+
+
+def route(app):
+    from app.views.account import account
+
+    app.register_blueprint(account.api.blueprint)

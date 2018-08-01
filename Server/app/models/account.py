@@ -1,13 +1,11 @@
-class SignupModel():
+from peewee import *
+
+from app.models import BaseModel
+
+
+class SignupModel(BaseModel):
     pass
-    # id
-    # email
-    # pw
-    # pw 확인
-    # 이름
-
-    # 이메일 인증 했는지 안했는지
 
 
-class UserModel():
+class UserModel(BaseModel):
     pass

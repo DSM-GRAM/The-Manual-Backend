@@ -1,15 +1,20 @@
-class Manual():
+from peewee import *
+
+from app.models import BaseModel
+
+
+class Manual(BaseModel):
     pass
     # 메뉴얼의 제목
     # 같이 하는 멤버
 
 
-class Main():
+class Main(BaseModel):
     pass
     # 프사 배사
 
 
-class Album():
+class Album(BaseModel):
     pass
     # - 앨범의 제목
     # - 사진
