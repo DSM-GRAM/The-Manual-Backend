@@ -20,6 +20,21 @@ class Main(BaseModel):
 
     # background_image =
 
+    user_name = CharField(
+        null=False
+    )
+    
+    user_email = CharField(
+        null=False
+    )
+    #name이랑 email은 가져오는건데 어떻게 합니까?
+
+    #관리자인지 아닌지 어떻게 알아야할지 모르겠씁니당
+
+    #자기 앨범수랑 질문수랑 답변수는 어디서 ... 가져와요..?
+
+    #최근활동은..?
+
 
 class Album(BaseModel):
 
