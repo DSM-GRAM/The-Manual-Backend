@@ -29,10 +29,24 @@ class Main(BaseModel):
     )
     #name이랑 email은 가져오는건데 어떻게 합니까?
 
-    #관리자인지 아닌지 어떻게 알아야할지 모르겠씁니당
+    is_admin = BooleanField(
+        #관리자 인지 아닌지?
+    )
 
-    #자기 앨범수랑 질문수랑 답변수는 어디서 ... 가져와요..?
+    my_album = IntegerField(
 
+    )
+
+    my_question = IntegerField(
+
+    )
+
+    my_answer = IntegerField(
+
+    )
+    # 저거 숫자들 가져오는거 어떻게 ㅎㅁㅎ?,, 멀채우면댈까요?
+
+    # Recent_activity =
     #최근활동은..?
 
 
