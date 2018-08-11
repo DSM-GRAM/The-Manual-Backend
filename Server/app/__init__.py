@@ -4,7 +4,7 @@ from peewee import MySQLDatabase
 from app.views import route
 from config.config import Config
 
-db = MySQLDatabase(Config.MYSQL_SETTING['database'])
+db = MySQLDatabase(**Config.MYSQL_SETTING)
 
 
 def create_app(*config_cls):

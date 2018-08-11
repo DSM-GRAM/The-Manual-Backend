@@ -11,7 +11,7 @@ class Config:
 
     MYSQL_SETTING = {
         'database': SERVICE_NAME,
-        'username': os.getenv('MYSQL_USERNAME', 'root'),
+        'user': os.getenv('MYSQL_USERNAME', 'root'),
         'password': os.getenv('MYSQL_PW', '')
     }
     # -> 일반적으로 데이터베이스 인스턴스는 다른 데에 분리하는 방식으로 구성해서,
