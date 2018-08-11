@@ -1,6 +1,8 @@
-from flask import Response
+from flask import Blueprint, Response
 from flask_restful import Resource
 import json
+
+api_blueprint = Blueprint('api', __name__)
 
 
 class BaseResource(Resource):
@@ -16,4 +18,4 @@ class BaseResource(Resource):
 def route(app):
     from app.views.account import account
 
-    app.register_blueprint(account.api.blueprint)
+    app.register_blueprint(api_blueprint)
