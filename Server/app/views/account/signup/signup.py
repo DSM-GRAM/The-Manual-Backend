@@ -13,7 +13,7 @@ class CheckIDDuplicated(BaseResource):
     def get(self, id):
         query = User.select().where(User.id == id)
         if query.exists():
-            return 406
+            return Response('', 406)
         else:
             return 200
 
@@ -23,6 +23,6 @@ class CheckEmailDuplicated(BaseResource):
     def get(self, email):
         query = User.select().where(User.email == email)
         if query.exists():
-            return 406
+            return Response('', 406)
         else:
             return 200
