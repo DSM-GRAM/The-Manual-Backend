@@ -16,4 +16,7 @@ def create_app(*config_cls):
     route(app)
     db.connect()
 
+    from app.models import BaseModel
+    db.create_tables(BaseModel.__subclasses__())
+
     return app
