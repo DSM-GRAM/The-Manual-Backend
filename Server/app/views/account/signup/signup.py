@@ -12,11 +12,13 @@ api.prefix = ''
 class CheckIDDuplicated(BaseResource):
     def get(self, id):
         query = User.select().where(User.id == id)
-            return Response('', 409 if query.exists() else 200)
+
+        return Response('', 409 if query.exists() else 200)
 
 
 @api.resource('/check/email/<email>')
 class CheckEmailDuplicated(BaseResource):
     def get(self, email):
         query = User.select().where(User.email == email)
-            return Response('', 409 if query.exists() else 200)
+
+        return Response('', 409 if query.exists() else 200)
