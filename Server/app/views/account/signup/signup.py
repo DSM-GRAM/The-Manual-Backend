@@ -15,7 +15,7 @@ class CheckIDDuplicated(BaseResource):
         if query.exists():
             return Response('', 406)
         else:
-            return 200
+            return Response('', 200)
 
 
 @api.resource('/check/email/<email>')
@@ -25,4 +25,4 @@ class CheckEmailDuplicated(BaseResource):
         if query.exists():
             return Response('', 406)
         else:
-            return 200
+            return Response('', 200)
