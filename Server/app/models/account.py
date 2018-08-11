@@ -4,28 +4,26 @@ from app.models import BaseModel
 
 
 class UserModel(BaseModel):
+    """
+    사용자 model
+    """
+
     id = CharField(
         primary_key=True
     )
 
     pw_hashed = CharField(
-        null=False
+        null=True
     )
 
     email = CharField(
-        null=False
+        null=True
     )
 
-    email_auth = BooleanField(
+    email_certified = BooleanField(
         default=False
     )
 
     name = CharField(
         null=False
     )
-
-    friend = IntegerField(
-        default=0
-    )
-
-    # more
