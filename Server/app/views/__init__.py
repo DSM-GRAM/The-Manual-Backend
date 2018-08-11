@@ -16,6 +16,6 @@ class BaseResource(Resource):
 
 
 def route(app):
-    from app.views.account import account
+    from app.views.account.auth import auth
 
     app.register_blueprint(api_blueprint)
